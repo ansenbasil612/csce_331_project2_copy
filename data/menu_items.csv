@@ -1,0 +1,21 @@
+menu_item_id,name,base_price,description,category
+1,Classic Milk Tea,4.99,Black tea with milk,Tea
+2,Jasmine Green Tea,4.49,Green tea with jasmine,Tea
+3,Oolong Tea,4.99,Classic oolong tea,Tea
+4,Brown Sugar Milk Tea,5.49,Milk tea with brown sugar,Tea
+5,Taro Milk Tea,5.49,Milk tea with taro,Tea
+6,Dragonfruit Tea,5.99,Fruit tea with dragonfruit,Tea
+7,Strawberry Tea,5.49,Fruit tea with strawberry,Tea
+8,Mango Tea,5.49,Fruit tea with mango,Tea
+9,Lychee Green Tea,5.49,Green tea with lychee,Tea
+10,Thai Tea,5.49,Sweet Thai milk tea,Tea
+11,Honey Lemon Tea,5.49,Tea with honey and lemon,Tea
+12,Peach Oolong,5.49,Oolong tea with peach,Tea
+13,Winter Melon Tea,4.99,Sweet winter melon tea,Tea
+14,Brown Sugar Boba Latte,6.49,Latte with brown sugar and boba,Tea
+15,Toffee Almond Latte,6.49,Latte with toffee and almond,Coffee
+16,Matcha Latte,6.49,Latte with matcha,Coffee
+17,Americano,5.49,Espresso with water,Coffee
+18,Dirty Chai,5.49,Chai tea with espresso,Coffee
+19,Cold Brew,5.49,Cold brewed coffee,Coffee
+20,Coffee Latte,5.99,Espresso with steamed milk,Coffee

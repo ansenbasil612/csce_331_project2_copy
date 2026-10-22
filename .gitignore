@@ -1,0 +1,5 @@
+# credentials
+dbSetup.java
+
+# compiled Java files
+*.class

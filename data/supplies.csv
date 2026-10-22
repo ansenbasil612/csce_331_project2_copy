@@ -1,0 +1,9 @@
+supply_id,name,cost,category
+1,16oz Cup,0.15,cups
+2,24oz Cup,0.2,cups
+3,Plastic Straw,0.05,straw
+4,Stainless Steel Straw,0.25,straw
+5,Napkin Pack,0.1,napkin
+6,Paper Bag (Large),0.2,bag
+7,Paper Bag (Small),0.1,bag
+8,Cup Holder,0.05,holder
