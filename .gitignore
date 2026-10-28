@@ -3,3 +3,7 @@ dbSetup.java
 
 # compiled Java files
 *.class
+
+# web app
+node_modules/
+.env

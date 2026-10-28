@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu · Boba POS</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="board">
+  <div class="board-wrap">
+    <header>
+      <h1>Menu</h1>
+      <p id="sizes"></p>
+    </header>
+    <div class="board-cols" id="board"></div>
+  </div>
+
+  <script src="/common.js"></script>
+  <script>
+    function boardSection(title, rows) {
+      return el('section', { className: 'board-section' },
+        el('h2', { textContent: title }),
+        ...rows.map((r) => el('div', { className: 'board-item' },
+          el('span', {}, r.name, r.description ? el('small', { textContent: r.description }) : null),
+          el('span', { className: 'dots' }),
+          el('span', { className: 'p', textContent: money(r.price) }))));
+    }
+
+    async function load() {
+      try {
+        const { items, toppings, sizes } = await api('/api/menu');
+        const categories = [...new Set(items.map((i) => i.category || 'Other'))];
+        document.getElementById('board').replaceChildren(
+          ...categories.map((c) => boardSection(c, items.filter((i) => (i.category || 'Other') === c))),
+          boardSection('Toppings', toppings));
+        document.getElementById('sizes').textContent = sizes
+          .map((s) => s.surcharge ? `${s.size} +${money(s.surcharge)}` : `${s.size} (menu price)`)
+          .join(' · ');
+      } catch (err) {
+        document.getElementById('board').textContent = `Could not load the menu: ${err.message}`;
+      }
+    }
+
+    load();
+    setInterval(load, 60_000); // pick up price changes without reloading the screen
+  </script>
+</body>
+</html>

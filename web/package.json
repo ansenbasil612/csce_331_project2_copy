@@ -1,0 +1,19 @@
+{
+  "name": "squad73-boba-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Preliminary Express.js GUI for the squad 73 bubble tea POS",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^5.1.0",
+    "pg": "^8.13.1"
+  }
+}

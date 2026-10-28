@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order here · Boba POS</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="kiosk" data-mode="kiosk">
+  <header class="topbar">
+    <a href="/">&larr; Home</a>
+    <h1>Order here</h1>
+    <span class="spacer"></span>
+    <span style="color: var(--muted)">Tap a drink to customize it</span>
+  </header>
+
+  <div class="order-layout">
+    <section class="menu-pane">
+      <div class="tabs" id="tabs"></div>
+      <div class="drink-grid" id="drinks"></div>
+    </section>
+
+    <aside class="cart-pane">
+      <h2>Your order</h2>
+      <ul class="cart-lines" id="cart"></ul>
+      <div class="cart-footer">
+        <div class="total"><span>Total</span><span id="total">$0.00</span></div>
+        <div class="pay-row" id="pay"></div>
+        <div class="status" id="status" role="status"></div>
+      </div>
+    </aside>
+  </div>
+
+  <dialog id="customize"></dialog>
+
+  <script src="/common.js"></script>
+  <script src="/order.js"></script>
+</body>
+</html>
